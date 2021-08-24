@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/largePhotoFragment"
+        android:name="com.github.yupanov.resumeyp.uicontrollers.LargePhotoFragment"
+        android:label="fragment_large_photo"
+        tools:layout="@layout/fragment_large_photo" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.github.yupanov.resumeyp.uicontrollers.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_largePhotoFragment"
+            app:destination="@id/largePhotoFragment" />
+    </fragment>
+</navigation>
