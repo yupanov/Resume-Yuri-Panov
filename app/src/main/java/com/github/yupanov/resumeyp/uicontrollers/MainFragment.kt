@@ -20,12 +20,16 @@ class MainFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View {
-        val binding = DataBindingUtil.inflate<MainFragmentBinding>(inflater,
-            R.layout.main_fragment, container, false)
+        val binding = MainFragmentBinding.inflate(inflater)
+
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         binding.viewModel = viewModel
+
         binding.ivSmallPhoto.setOnClickListener { view ->
             view.findNavController().navigate(R.id.action_mainFragment_to_largePhotoFragment)
+        }
+        binding.btWeather.setOnClickListener { view ->
+            view.findNavController().navigate(R.id.action_mainFragment_to_weatherFragment)
         }
 
         val adapter = ButtonsRvAdapter()
@@ -33,6 +37,4 @@ class MainFragment : Fragment() {
 
         return binding.root
     }
-
-
 }

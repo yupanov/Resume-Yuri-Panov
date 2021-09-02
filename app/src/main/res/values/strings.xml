@@ -20,8 +20,15 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="large_photo">Large personal photo</string>
     <string name="hobby_button">Hobby button</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="temp24">24\u00B0C</string>
+    <string name="temp">%1$s\u00B0C</string>
+    <string name="caba">Cuidad Autónoma de Buenos Aires</string>
+    <string name="current_weaher">Current weaher</string>
+    <string name="weather_description">Sunny</string>
+    <string name="current_temperature">Current temperature</string>
+    <string name="description_weather">Description</string>
+    <string name="max_temperature">maximum</string>
+    <string name="min_temperature">minimum</string>
 
 
 </resources>

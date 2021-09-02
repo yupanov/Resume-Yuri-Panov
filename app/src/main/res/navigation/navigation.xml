@@ -13,9 +13,16 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.github.yupanov.resumeyp.uicontrollers.MainFragment"
-        android:label="MainFragment" >
+        android:label="MainFragment">
         <action
             android:id="@+id/action_mainFragment_to_largePhotoFragment"
             app:destination="@id/largePhotoFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.github.yupanov.resumeyp.weather.WeatherFragment"
+        android:label="WeatherFragment" />
 </navigation>
