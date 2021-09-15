@@ -29,6 +29,13 @@
     <string name="description_weather">Description</string>
     <string name="max_temperature">maximum</string>
     <string name="min_temperature">minimum</string>
+    <string name="location_permission_granted">Location permission granted</string>
+    <string name="location_permission_denied">Location permission denied</string>
+    <string name="location_access_required">Unable to update location without permission.</string>
+    <string name="ok">OK</string>
+    <string name="location_permission_not_available">Location permission is not available</string>
+    <string name="latitude_lbl">latitude:</string>
+    <string name="longitude_lbl">longitude:</string>
 
 
 </resources>

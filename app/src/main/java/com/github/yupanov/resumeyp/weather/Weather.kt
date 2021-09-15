@@ -16,7 +16,7 @@ import java.util.*
 private const val BASE_URL = "https://api.openweathermap.org/data/2.5/"
 val KEY = "49ed19ec9ab199a10d8e2629b7b77c8a"
 val UNITS = "metric"
-var lang = Locale.getDefault().getLanguage()
+var lang = Locale.getDefault().getDisplayLanguage()
 
 data class Weather(
     val location: String,
@@ -36,9 +36,23 @@ private val retrofit = Retrofit.Builder()
     .baseUrl(BASE_URL)
     .build()
 
+//interface WeatherApiService {
+//    @GET ("weather")
+//    suspend fun getWeather (
+//        @Query("id") id: String,
+//        @Query("appid") key: String,
+//        @Query("units") units: String,
+//        @Query("lang") language: String): WeatherFromJson
+//}
+
 interface WeatherApiService {
     @GET ("weather")
-    suspend fun getWeather (@Query("id") id: String, @Query("appid") key: String, @Query("units") units: String, @Query("lang") language: String): WeatherFromJson
+    suspend fun getWeather (
+        @Query("lat") lat: String,
+        @Query("lon") lon: String,
+        @Query("appid") key: String,
+        @Query("units") units: String,
+        @Query("lang") language: String): WeatherFromJson
 }
 
 object WeatherApi {

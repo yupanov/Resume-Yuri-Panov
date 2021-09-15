@@ -1,13 +1,21 @@
 package com.github.yupanov.resumeyp.weather
 
+import android.Manifest
+import android.content.pm.PackageManager
+import androidx.core.app.ActivityCompat.requestPermissions
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.github.yupanov.resumeyp.uicontrollers.MainActivity
+import com.google.android.gms.location.LocationServices
 import kotlinx.coroutines.launch
 
 class WeatherViewModel: ViewModel() {
-    private val id = "3433955"
+//    private val id = "3433955"
+    lateinit var lat: String
+    lateinit var lon: String
 
     private val _weather = MutableLiveData<Weather>()
     val weather: LiveData<Weather>
@@ -19,13 +27,18 @@ class WeatherViewModel: ViewModel() {
 
 
     init {
-        getWeather(id)
+        setCoordinates()
+        getWeather(lat, lon)
     }
 
-    private fun getWeather(id: String) {
+    private fun setCoordinates() {
+        ???
+    }
+
+    private fun getWeather(lat: String, lon: String) {
         viewModelScope.launch {
             try {
-                val weatherFromJson = WeatherApi.retrofitService.getWeather(id, KEY, UNITS, lang)
+                val weatherFromJson = WeatherApi.retrofitService.getWeather(lat, lon, KEY, UNITS, lang)
                 val weatherShort = Weather(weatherFromJson.name, weatherFromJson.weather[0].description, weatherFromJson.main.temp, weatherFromJson.main.tempMin, weatherFromJson.main.tempMax)
                 _weather.value = weatherShort
             } catch (e: Exception) {
@@ -34,15 +47,5 @@ class WeatherViewModel: ViewModel() {
         }
     }
 
-//    private fun getWeather(id: String) {
-//        WeatherApi.retrofitService.getWeather(id, KEY, UNITS).enqueue(object: Callback<String> {
-//            override fun onResponse(call: Call<String>, response: Response<String>) {
-//                _res.value = response.body()
-//            }//
-//            override fun onFailure(call: Call<String>, t: Throwable) {
-//                _res.value = t.message
-//            }
-//        })
-//    }
 
 }
