@@ -16,8 +16,6 @@
     <string name="title">Title</string>
     <string name="description">Description</string>
     <string name="title_activity_fullscreen_photo">FullscreenActivity</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="large_photo">Large personal photo</string>
     <string name="hobby_button">Hobby button</string>
     <string name="temp24">24\u00B0C</string>
@@ -29,6 +27,13 @@
     <string name="description_weather">Description</string>
     <string name="max_temperature">maximum</string>
     <string name="min_temperature">minimum</string>
+    <string name="location_permission_granted">Location permission granted</string>
+    <string name="location_permission_denied">Location permission denied</string>
+    <string name="location_access_required">Unable to update location without permission.</string>
+    <string name="ok">OK</string>
+    <string name="location_permission_not_available">Location permission is not available</string>
+    <string name="latitude_lbl">latitude:</string>
+    <string name="longitude_lbl">longitude:</string>
 
 
 </resources>

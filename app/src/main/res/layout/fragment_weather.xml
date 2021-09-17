@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
         <variable
-            name="viewModel"
+            name="weatherViewModel"
             type="com.github.yupanov.resumeyp.weather.WeatherViewModel" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/weatherFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".weather.WeatherFragment">
@@ -33,10 +36,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_normal"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/margin_normal"
             android:textSize="@dimen/large_text"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_location"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lbl_longitude"
             tools:text="@string/temp24" />
 
         <TextView
@@ -112,6 +115,65 @@
             android:layout_marginTop="@dimen/margin_normal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_min_temp_label" />
+
+        <TextView
+            android:id="@+id/tv_lbl_latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="@string/latitude_lbl"
+            app:layout_constraintStart_toStartOf="@+id/tv_location"
+            app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+
+        <TextView
+            android:id="@+id/tv_latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            tools:text="0.0 some latitude"
+            app:layout_constraintStart_toEndOf="@+id/tv_lbl_latitude"
+            app:layout_constraintTop_toTopOf="@+id/tv_lbl_latitude" />
+
+        <TextView
+            android:id="@+id/tv_lbl_longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="@string/longitude_lbl"
+            app:layout_constraintStart_toStartOf="@+id/tv_lbl_latitude"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lbl_latitude" />
+
+        <TextView
+            android:id="@+id/tv_longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            tools:text="0.0 some longitude"
+            app:layout_constraintStart_toEndOf="@+id/tv_lbl_longitude"
+            app:layout_constraintTop_toTopOf="@+id/tv_lbl_longitude" />
+
+        <Button
+            android:id="@+id/bt_getLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="get location"
+            android:onClick="@{() -> weatherViewModel.putCoordinates()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_min_temp_label" />
+
+        <Button
+            android:id="@+id/bt_getWeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="get weather"
+            android:onClick="@{() -> weatherViewModel.fetchWeather()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_getLocation" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
