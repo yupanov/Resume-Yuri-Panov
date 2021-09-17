@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
         <variable
-            name="viewModel"
+            name="weatherViewModel"
             type="com.github.yupanov.resumeyp.weather.WeatherViewModel" />
-        <variable
-            name="locationViewModel"
-            type="com.github.yupanov.resumeyp.location.LocationViewModel" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -152,6 +151,29 @@
             tools:text="0.0 some longitude"
             app:layout_constraintStart_toEndOf="@+id/tv_lbl_longitude"
             app:layout_constraintTop_toTopOf="@+id/tv_lbl_longitude" />
+
+        <Button
+            android:id="@+id/bt_getLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="get location"
+            android:onClick="@{() -> weatherViewModel.putCoordinates()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_min_temp_label" />
+
+        <Button
+            android:id="@+id/bt_getWeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="get weather"
+            android:onClick="@{() -> weatherViewModel.fetchWeather()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_getLocation" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

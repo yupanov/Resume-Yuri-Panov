@@ -13,7 +13,6 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.github.yupanov.resumeyp.R
 import com.github.yupanov.resumeyp.databinding.FragmentWeatherBinding
-import com.github.yupanov.resumeyp.location.LocationViewModel
 import com.google.android.material.snackbar.Snackbar
 
 
@@ -24,9 +23,9 @@ class WeatherFragment : Fragment() {
     private val weatherViewModel: WeatherViewModel by lazy {
         ViewModelProvider(this).get(WeatherViewModel::class.java)
     }
-    private val locationViewModel: LocationViewModel by lazy {
-        ViewModelProvider(this).get(LocationViewModel::class.java)
-    }
+//    private val locationViewModel: LocationViewModel by lazy {
+//        ViewModelProvider(this).get(LocationViewModel::class.java)
+//    }
 
     lateinit var binding: FragmentWeatherBinding
 
@@ -103,14 +102,14 @@ class WeatherFragment : Fragment() {
     }
 
     private fun requestLocationUpdates() {
-        binding.locationViewModel = locationViewModel
-        locationViewModel.locationLiveData.observe(binding.lifecycleOwner!!, {
+//        binding.locationViewModel = locationViewModel
+        binding.weatherViewModel = weatherViewModel
+        weatherViewModel.locationLiveData.observe(binding.lifecycleOwner!!, {
             binding.tvLatitude.text = it.latitude
             binding.tvLongitude.text = it.longitude
 
-            binding.viewModel = weatherViewModel
-            weatherViewModel.lat = it.latitude
-            weatherViewModel.lon = it.longitude
+//            weatherViewModel.lat = it.latitude
+//            weatherViewModel.lon = it.longitude
         })
     }
 }

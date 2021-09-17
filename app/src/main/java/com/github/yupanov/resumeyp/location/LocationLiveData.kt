@@ -12,7 +12,7 @@ class LocationLiveData(context: Context): LiveData<LocationDetails>()  {
     private val client = LocationServices.getFusedLocationProviderClient(context)
 
     private val locationCallback = object: LocationCallback() {
-        override fun onLocationResult(locationResult: LocationResult) {
+        override fun onLocationResult(locationResult: LocationResult?) {
             super.onLocationResult(locationResult)
 
             locationResult ?: return
@@ -27,9 +27,7 @@ class LocationLiveData(context: Context): LiveData<LocationDetails>()  {
     @SuppressLint("MissingPermission")
     override fun onActive() {
         super.onActive()
-        client.lastLocation.addOnSuccessListener {
-            setLocationData(it)
-        }
+        client.lastLocation.addOnSuccessListener { setLocationData(it) }
         client.requestLocationUpdates(locationRequest, locationCallback, null)
     }
 
@@ -41,7 +39,7 @@ class LocationLiveData(context: Context): LiveData<LocationDetails>()  {
 
 
     private fun setLocationData(location: Location) {
-        value = LocationDetails(location.longitude.toString(), location.latitude.toString())
+        value = LocationDetails(location.latitude.toString(), location.longitude.toString() )
     }
 
 
