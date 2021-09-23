@@ -1,4 +1,4 @@
-package com.github.yupanov.resumeyp.uicontrollers.buttonsrecyclerview
+package com.github.yupanov.resumeyp.uicontrollers
 
 import android.view.LayoutInflater
 import android.view.View

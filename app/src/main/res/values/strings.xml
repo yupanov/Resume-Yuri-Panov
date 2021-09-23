@@ -22,9 +22,9 @@
     <string name="temp">%1$s\u00B0C</string>
     <string name="caba">Cuidad Autónoma de Buenos Aires</string>
     <string name="current_weaher">Current weaher</string>
-    <string name="weather_description">Sunny</string>
-    <string name="current_temperature">Current temperature</string>
-    <string name="description_weather">Description</string>
+    <string name="weather_description">sunny</string>
+    <string name="current_temperature">current temperature</string>
+    <string name="description_weather">description</string>
     <string name="max_temperature">maximum</string>
     <string name="min_temperature">minimum</string>
     <string name="location_permission_granted">Location permission granted</string>

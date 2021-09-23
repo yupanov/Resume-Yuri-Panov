@@ -15,12 +15,14 @@ import kotlinx.coroutines.launch
 class WeatherViewModel(application :Application): AndroidViewModel(application) {
 
     val locationLiveData = LocationLiveData(application)
-    //        get() = locationLiveData
-//    internal fun getLocationLiveData() = locationLiveData
 
 //    private val id = "3433955"
     lateinit var lat: String
     lateinit var lon: String
+
+    private val _status = MutableLiveData<WeatherStatus>()
+    val status: LiveData<WeatherStatus>
+        get() = _status
 
     private val _weather = MutableLiveData<Weather>()
     val weather: LiveData<Weather>
@@ -32,32 +34,31 @@ class WeatherViewModel(application :Application): AndroidViewModel(application) 
 
 
     init {
-//        fetchWeather()
-    }
-
-    fun putCoordinates() {
-        lat = formatCoordinate(locationLiveData.value?.latitude.toString())
-        lon = formatCoordinate(locationLiveData.value?.longitude.toString())
-        Log.i("latlon", lat + " " + lon)
-    }
-
-    private fun formatCoordinate(s: String): String {
-        val dotIndex = s.indexOf(".", 0, false)
-        return s.subSequence(0, dotIndex + 3).toString()
+        _status.value = WeatherStatus.LOADING
     }
 
 
     fun fetchWeather() {
         viewModelScope.launch {
             try {
+                _status.value = WeatherStatus.LOADING
                 val retrofitService = WeatherApi.retrofitService
                 val weatherFromJson = retrofitService.getWeather(lat, lon, KEY, UNITS, lang)
-                val weatherShort = Weather(weatherFromJson.name, weatherFromJson.weather[0].description, weatherFromJson.main.temp, weatherFromJson.main.tempMin, weatherFromJson.main.tempMax)
+                val weatherShort = Weather(
+                    weatherFromJson.name,
+                    weatherFromJson.weather[0].description,
+                    weatherFromJson.main.temp,
+                    weatherFromJson.main.tempMin,
+                    weatherFromJson.main.tempMax)
                 _weather.value = weatherShort
+                _status.value = WeatherStatus.DONE
             } catch (e: Exception) {
+                _status.value = WeatherStatus.ERROR
                 _weather.value = e.message?.let { Weather("error", it, 0F, 0F, 0F) }
             }
         }
     }
 
 }
+
+enum class WeatherStatus { LOADING, ERROR, DONE }

@@ -16,7 +16,9 @@
         android:label="MainFragment">
         <action
             android:id="@+id/action_mainFragment_to_largePhotoFragment"
-            app:destination="@id/largePhotoFragment" />
+            app:destination="@id/largePhotoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_mainFragment_to_weatherFragment"
             app:destination="@id/weatherFragment" />

@@ -23,9 +23,7 @@ class WeatherFragment : Fragment() {
     private val weatherViewModel: WeatherViewModel by lazy {
         ViewModelProvider(this).get(WeatherViewModel::class.java)
     }
-//    private val locationViewModel: LocationViewModel by lazy {
-//        ViewModelProvider(this).get(LocationViewModel::class.java)
-//    }
+
 
     lateinit var binding: FragmentWeatherBinding
 
@@ -34,11 +32,13 @@ class WeatherFragment : Fragment() {
 //        val binding = DataBindingUtil.inflate<FragmentWeatherBinding>(inflater, R.layout.fragment_weather, container, false) // The same?
         binding = FragmentWeatherBinding.inflate(inflater)
         binding.lifecycleOwner = this
+        binding.weatherViewModel = weatherViewModel
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         startLocation()
         startWeather()
     }
@@ -102,14 +102,21 @@ class WeatherFragment : Fragment() {
     }
 
     private fun requestLocationUpdates() {
-//        binding.locationViewModel = locationViewModel
-        binding.weatherViewModel = weatherViewModel
         weatherViewModel.locationLiveData.observe(binding.lifecycleOwner!!, {
-            binding.tvLatitude.text = it.latitude
-            binding.tvLongitude.text = it.longitude
+            it?.let {
+                binding.tvLatitude.text = formatCoordinate(it.latitude)
+                binding.tvLongitude.text = formatCoordinate(it.longitude)
 
-//            weatherViewModel.lat = it.latitude
-//            weatherViewModel.lon = it.longitude
+                weatherViewModel.lat = it.latitude
+                weatherViewModel.lon = it.longitude
+
+                weatherViewModel.fetchWeather()
+            }
         })
+    }
+
+    private fun formatCoordinate(s: String): String {
+        val dotIndex = s.indexOf(".", 0, false)
+        return s.subSequence(0, dotIndex + 4).toString()
     }
 }
