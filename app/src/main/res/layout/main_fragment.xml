@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.github.yupanov.resumeyp.MainViewModel" />
+            type="com.github.yupanov.resumeyp.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

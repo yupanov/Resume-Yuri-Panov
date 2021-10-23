@@ -1,4 +1,4 @@
-package com.github.yupanov.resumeyp.uicontrollers
+package com.github.yupanov.resumeyp.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

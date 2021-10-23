@@ -34,6 +34,9 @@
     <string name="location_permission_not_available">Location permission is not available</string>
     <string name="latitude_lbl">latitude:</string>
     <string name="longitude_lbl">longitude:</string>
+    <string name="save_weather_data">Save weather data</string>
+    <string name="show_weather_data">Show weather data</string>
+    <string name="refresh_weather_data">Refresh data</string>
 
 
 </resources>

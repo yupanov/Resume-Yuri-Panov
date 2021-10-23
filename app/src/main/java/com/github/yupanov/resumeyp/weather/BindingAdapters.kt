@@ -2,6 +2,7 @@ package com.github.yupanov.resumeyp.weather
 
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.github.yupanov.resumeyp.R
 

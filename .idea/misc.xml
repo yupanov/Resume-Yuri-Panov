@@ -16,8 +16,11 @@
         <entry key="..\:/Programming/Git/ResumeYP/app/src/main/res/layout/details.xml" value="0.18854166666666666" />
         <entry key="..\:/Programming/Git/ResumeYP/app/src/main/res/layout/fragment_about.xml" value="0.20625" />
         <entry key="..\:/Programming/Git/ResumeYP/app/src/main/res/layout/fragment_blank.xml" value="0.18854166666666666" />
+        <entry key="..\:/Programming/Git/ResumeYP/app/src/main/res/layout/fragment_info_pager.xml" value="0.20625" />
         <entry key="..\:/Programming/Git/ResumeYP/app/src/main/res/layout/fragment_large_photo.xml" value="0.3625" />
         <entry key="..\:/Programming/Git/ResumeYP/app/src/main/res/layout/fragment_weather.xml" value="0.3619791666666667" />
+        <entry key="..\:/Programming/Git/ResumeYP/app/src/main/res/layout/info_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Programming/Git/ResumeYP/app/src/main/res/layout/info_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Programming/Git/ResumeYP/app/src/main/res/layout/main_fragment.xml" value="0.33" />
         <entry key="..\:/Programming/Git/ResumeYP/app/src/main/res/layout/rv_holder.xml" value="0.8150753768844221" />
       </map>

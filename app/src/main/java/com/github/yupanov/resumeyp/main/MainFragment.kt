@@ -1,4 +1,4 @@
-package com.github.yupanov.resumeyp.uicontrollers
+package com.github.yupanov.resumeyp.main
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
-import com.github.yupanov.resumeyp.MainViewModel
 import com.github.yupanov.resumeyp.R
 import com.github.yupanov.resumeyp.databinding.MainFragmentBinding
 

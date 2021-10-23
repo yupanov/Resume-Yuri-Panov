@@ -1,4 +1,4 @@
-package com.github.yupanov.resumeyp.uicontrollers
+package com.github.yupanov.resumeyp.main
 
 import android.os.Bundle
 import android.view.LayoutInflater

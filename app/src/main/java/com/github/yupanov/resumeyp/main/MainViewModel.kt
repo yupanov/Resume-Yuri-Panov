@@ -1,4 +1,4 @@
-package com.github.yupanov.resumeyp
+package com.github.yupanov.resumeyp.main
 
 import androidx.lifecycle.ViewModel
 

@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
-            name="weatherViewModel"
+            name="viewModel"
             type="com.github.yupanov.resumeyp.weather.WeatherViewModel" />
     </data>
 
@@ -14,20 +14,20 @@
         android:id="@+id/weatherFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".weather.WeatherFragment"
-        android:background="@color/primaryLightColor">
+        android:background="@color/primaryLightColor"
+        tools:context=".weather.WeatherFragment">
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="@dimen/margin_normal"
-                android:id="@+id/iv_status"
-                app:weather_status="@{weatherViewModel.status}"
-                tools:src="@drawable/ic_loading_image" />
+        <ImageView
+            android:id="@+id/iv_status"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:weather_status="@{viewModel.status}"
+            tools:src="@drawable/ic_loading_image" />
 
 
         <TextView
@@ -159,6 +159,46 @@
             app:layout_constraintStart_toStartOf="@+id/tv_lbl_longitude"
             app:layout_constraintTop_toTopOf="@+id/tv_lbl_longitude"
             tools:text="0.0 some longitude" />
+
+        <Button
+            android:id="@+id/bt_save_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="@string/save_weather_data"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_min_temp_label" />
+
+        <TextView
+            android:id="@+id/tv_database"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_save_data" />
+
+        <Button
+            android:id="@+id/bt_show_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="@string/show_weather_data"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_database" />
+
+        <Button
+            android:id="@+id/bt_refresh_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="@string/refresh_weather_data"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_show_data" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -2,6 +2,7 @@ package com.github.yupanov.resumeyp.weather
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.opengl.Visibility
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,6 +14,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.github.yupanov.resumeyp.R
 import com.github.yupanov.resumeyp.databinding.FragmentWeatherBinding
+import com.github.yupanov.resumeyp.weather.database.WeatherDatabase
 import com.google.android.material.snackbar.Snackbar
 
 
@@ -21,7 +23,11 @@ class WeatherFragment : Fragment() {
     private val LOCATION_PERMISSION_REQUEST_CODE = 100
 
     private val weatherViewModel: WeatherViewModel by lazy {
-        ViewModelProvider(this).get(WeatherViewModel::class.java)
+        val application = requireActivity().application
+        val dataSource = WeatherDatabase.getInstance(application).dao
+
+        val vmFactory = WeatherViewModelFactory(dataSource, application)
+        ViewModelProvider(this, vmFactory).get(WeatherViewModel::class.java)
     }
 
 
@@ -32,7 +38,7 @@ class WeatherFragment : Fragment() {
 //        val binding = DataBindingUtil.inflate<FragmentWeatherBinding>(inflater, R.layout.fragment_weather, container, false) // The same?
         binding = FragmentWeatherBinding.inflate(inflater)
         binding.lifecycleOwner = this
-        binding.weatherViewModel = weatherViewModel
+        binding.viewModel = weatherViewModel
         return binding.root
     }
 
@@ -41,6 +47,22 @@ class WeatherFragment : Fragment() {
 
         startLocation()
         startWeather()
+        binding.apply {
+            btShowData.setOnClickListener { showDatabase() }
+            btSaveData.setOnClickListener {
+                weatherViewModel.saveWeatherData()
+                btSaveData.visibility = View.INVISIBLE
+            }
+            btRefreshData.setOnClickListener {
+                weatherViewModel.fetchWeather()
+                btSaveData.visibility = View.VISIBLE
+            }
+        }
+    }
+
+    private fun showDatabase() {
+        val dataString = weatherViewModel.weatherDataToText.value
+        binding.tvDatabase.text = dataString
     }
 
     private fun startLocation() {
@@ -55,10 +77,9 @@ class WeatherFragment : Fragment() {
     }
 
     private fun startWeather() {
-
         weatherViewModel.weather.observe( viewLifecycleOwner, {
             binding.apply {
-                tvLocation.text = it.location
+                tvLocation.text = it.locationName
                 tvDescription.text = it.description
                 tvCurrentTemp.text = getString(R.string.temp, "%.1f".format(it.temperature))
                 tvMinTemp.text = getString(R.string.temp, "%.1f".format(it.min))
@@ -116,7 +137,7 @@ class WeatherFragment : Fragment() {
     }
 
     private fun formatCoordinate(s: String): String {
-        val dotIndex = s.indexOf(".", 0, false)
+        val dotIndex = s.indexOf(".", 0)
         return s.subSequence(0, dotIndex + 4).toString()
     }
 }

@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/largePhotoFragment"
-        android:name="com.github.yupanov.resumeyp.uicontrollers.LargePhotoFragment"
+        android:name="com.github.yupanov.resumeyp.main.LargePhotoFragment"
         android:label="fragment_large_photo"
         tools:layout="@layout/fragment_large_photo" />
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.github.yupanov.resumeyp.uicontrollers.MainFragment"
+        android:name="com.github.yupanov.resumeyp.main.MainFragment"
         android:label="MainFragment">
         <action
             android:id="@+id/action_mainFragment_to_largePhotoFragment"
@@ -22,9 +22,20 @@
         <action
             android:id="@+id/action_mainFragment_to_weatherFragment"
             app:destination="@id/weatherFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
     </fragment>
     <fragment
         android:id="@+id/weatherFragment"
         android:name="com.github.yupanov.resumeyp.weather.WeatherFragment"
         android:label="WeatherFragment" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.github.yupanov.resumeyp.info.InfoFragment"
+        android:label="InfoFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
 </navigation>
