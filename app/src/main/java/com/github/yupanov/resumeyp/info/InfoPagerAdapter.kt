@@ -1,5 +1,6 @@
 package com.github.yupanov.resumeyp.info
 
+import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,8 +11,8 @@ import com.github.yupanov.resumeyp.databinding.InfoItemBinding
 import com.github.yupanov.resumeyp.main.ButtonsRvAdapter
 
 
-class InfoPagerAdapter: RecyclerView.Adapter<InfoPagerAdapter.InfoPagerViewHolder>() {
-    var data = infoBase.base
+class InfoPagerAdapter(resources: Resources): RecyclerView.Adapter<InfoPagerAdapter.InfoPagerViewHolder>() {
+    var data = infoBase(resources).getInstance()
         set(value) {
             field = value
             notifyDataSetChanged() // DiffUtil?
