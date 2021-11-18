@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
         <data>
 
         </data>
 
-        <FrameLayout
-            android:id="@+id/container_button"
+        <LinearLayout
+            android:id="@+id/containerRv"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:background="@color/primaryLightColor">
+            android:background="@color/primaryLightColor"
 
-                <ImageView
-                    android:id="@+id/iv_rv_icon"
-                    android:layout_width="54dp"
-                    android:layout_height="43dp"
-                    android:layout_gravity="center"
-                    tools:src="@drawable/bike" />
+            android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tv_rv_button"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/tvRvTitle"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center"
-                    android:layout_margin="@dimen/margin_normal"
-                    android:textSize="18sp"
-                    tools:text="@string/skills_button_label" />
-        </FrameLayout>
+                    tools:text="@string/skills_title"
+                    style="@style/title"
+                    />
+
+                <TextView
+                    android:id="@+id/tvRvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/margin_normal"
+                    android:paddingEnd="@dimen/margin_normal"
+                    android:paddingBottom="@dimen/margin_normal"
+
+                    android:ellipsize="end"
+                    android:lines="3"
+                    tools:text="@string/skills_text" />
+        </LinearLayout>
 </layout>

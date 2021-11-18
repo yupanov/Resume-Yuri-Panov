@@ -13,10 +13,13 @@ class InfoFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val adapter = InfoPagerAdapter()
+        val adapter = InfoPagerAdapter(resources)
         val binding = FragmentInfoPagerBinding.inflate(inflater)
 
         binding.infoPager.adapter = adapter
+        val pageId = requireArguments().getInt("id")
+        binding.infoPager.setCurrentItem(pageId, false)
+
         return binding.root
     }
 }

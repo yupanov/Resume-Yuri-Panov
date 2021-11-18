@@ -1,5 +1,6 @@
 package com.github.yupanov.resumeyp.main
 
+import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,35 +10,50 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.github.yupanov.resumeyp.R
+import com.github.yupanov.resumeyp.databinding.RvHolderBinding
+import com.github.yupanov.resumeyp.info.Info
 import com.github.yupanov.resumeyp.info.infoBase
 
-class ButtonsRvAdapter : RecyclerView.Adapter<ButtonsRvAdapter.ButtonsHolder>() {
-    var data = infoBase.base
+class ButtonsRvAdapter(resources: Resources) : RecyclerView.Adapter<ButtonsRvAdapter.ButtonsHolder>() {
+    var data: List<Info> = infoBase(resources).getInstance()
     set(value) {
         field = value
         notifyDataSetChanged() // DiffUtil?
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ButtonsHolder {
-        val layoutInflater = LayoutInflater.from(parent.context)
-        val view = layoutInflater.inflate(R.layout.rv_holder, parent, false)
-        return ButtonsHolder(view)
+        return ButtonsHolder.getHolder(parent)
     }
 
     override fun onBindViewHolder(holder: ButtonsHolder, position: Int) {
-        val item = data[position]
-        holder.title.text = item.title
-//        holder.container.setOnClickListener { view ->
-//            view.findNavController()
-//                .navigate(MainFragmentDirections.actionMainFragmentToInfoFragment(position))
-//        }
+        val curData = data[position]
+        holder.bind(curData, position)
     }
 
     override fun getItemCount() = data.size
 
 
-    class ButtonsHolder(itemView: View) : ViewHolder(itemView) {
-        val title: TextView = itemView.findViewById(R.id.tv_rv_button)
-        val container = itemView.findViewById<FrameLayout>(R.id.container)
+    class ButtonsHolder private constructor(binding: RvHolderBinding) : ViewHolder(binding.root) {
+        val tvTitle = binding.tvRvTitle
+        val container = binding.containerRv
+        val tvDescription = binding.tvRvDescription
+
+        companion object{
+            fun getHolder(parent: ViewGroup): ButtonsHolder {
+                val inflater = LayoutInflater.from(parent.context)
+                val binding = RvHolderBinding.inflate(inflater)
+                return ButtonsHolder(binding)
+            }
+        }
+
+        fun bind(curData: Info, position: Int) {
+            tvTitle.text = curData.title
+            tvDescription.text = curData.description
+            container.setOnClickListener { view ->
+                view.findNavController()
+                    .navigate(MainFragmentDirections.actionMainFragmentToInfoFragment(position))
+            }
+        }
     }
+
 }

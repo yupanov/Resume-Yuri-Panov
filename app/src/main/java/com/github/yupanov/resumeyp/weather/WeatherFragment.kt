@@ -4,14 +4,13 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.opengl.Visibility
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.github.yupanov.resumeyp.R
 import com.github.yupanov.resumeyp.databinding.FragmentWeatherBinding
 import com.github.yupanov.resumeyp.weather.database.WeatherDatabase
@@ -33,7 +32,24 @@ class WeatherFragment : Fragment() {
 
     lateinit var binding: FragmentWeatherBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+    // Menu:
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.weather_fragment, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.menu_item_about_weather) {
+            findNavController().navigate(R.id.action_weatherFragment_to_aboutWeatherFragment)
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+        override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View {
 //        val binding = DataBindingUtil.inflate<FragmentWeatherBinding>(inflater, R.layout.fragment_weather, container, false) // The same?
         binding = FragmentWeatherBinding.inflate(inflater)

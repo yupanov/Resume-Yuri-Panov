@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Резюме Юрия Панова</string>
+    <string name="about_title">О программе</string>
+    <string name="android_developer">Разработчик Android</string>
+    <string name="photo_description">Личное фото</string>
+    <string name="name">Юрий Панов</string>
+    <string name="skills_title">Навыки</string>
+    <string name="experience_title">Опыт</string>
+    <string name="education_title">Образование</string>
+    <string name="current_weather">Текущая погода</string>
+    <string name="current_temperature">текущая температура</string>
+    <string name="description_weather">описание</string>
+    <string name="max_temperature">максимум</string>
+    <string name="min_temperature">минимум</string>
+    <string name="location_permission_granted">Разрешение GPS получено</string>
+    <string name="location_permission_denied">Разрешение GPS отклонено</string>
+    <string name="location_access_required">Невозможно получить данные о расположении без разрешения</string>
+    <string name="location_permission_not_available">Разрешение GPS недоступно</string>
+    <string name="latitude_lbl">широта:</string>
+    <string name="longitude_lbl">долгота:</string>
+    <string name="save_weather_data">Сохранить данные о погоде</string>
+    <string name="show_weather_data">Показать данные о погоде</string>
+    <string name="refresh_weather_data">Обновить данные</string>
+    <string name="hobby_title">Хобби</string>
+    <string name="summary_title">Резюме</string>
+    <string name="summary_text">Меня зовут Юрий, я живу в Аргентине последние семь лет. Я начинаю мою карьеру в IT,  разработка приложений для Android и техники ООП в последнее время занимают меня больше всего. Я закончил несколько курсов программирования (Java, Python, Diseño web fullstack, разработка приложений для Android на Kotlin) и продолжаю изучать  самостоятельно, разрабатываю приложения с учебной целью.\nНекоторые технологии, которыми я владею:\n- Kotlin, Java, Android SDK\n- Data binding, MVVM и LiveData\n- Navigation\n- RecyclerView и ViewPager2\n- Retrofit (запрос данных из Internet)\n- Room (библиотека для работы с БД SQL для Android)\n- Fused location provider (GPS)\n- и т.д.\nКроме этого у меня есть навыки работы с Python, JavaScript, C++ (Arduino), React, Bootstrap, Node JS, React Native.\n
+\n
+Я говорю и пишу на русском, испанском, английском и португальском языках.\nВ течение мой жизни я работал графическим дизайнером, фотографом, организовал школу танго  в Москве и несколько проектов, связанных с танго в Аргентине. Сейчас я работаю техником холодильного оборудования. Я ответствен, коммуникабелен, креативен, быстро учусь, хороший лидер.\n
+\n
+Мои навыки как программиста продемонстрированы в этом прилолжении.</string>
+    <string name="skills_text">Языки программирования:\n- Java\n- Kotlin\n- Python\n- JavaScript\n- C++ (Arduino)\n- MySQL, SQLite\n
+\n
+Технологии, относящиеся к разработке Android:\n- Android SDK\n- Data binding, MVVM, LiveData\n- Navigation, Safe args\n- Recycler view, ViewPager2\n- Retrofit (data fetching from the Internet)\n- Moshi (JSON parsing)\n- Room (SQL database library for Android)\n- Glide\n- Fused location provider (GPS)\n- React Native (в процессе изучения)\n- и другие.\nБольшинство этих технологий применены в этом приложении (Резюме Юрий Панов).\n
+\n
+Я говорю и пишу на следующих языках:\n- русский\n- испанский\n- английский\n- португальский\nКроме того, у меня есть некоторые навыки немецкого и французского.\n
+\n
+Гибкие навыки (soft skills)\nЯ ответствен, честен и креативен, признаю и исправляю свои ошибки. У меня довольно неплохие навыки общения, как правило, людям комфортно со мной работать, я хороший лидер, у меня есть опыт создания мотивированных команд, могу обучать, объяснять сложные вещи структурно и простым языком, у меня есть глобальное видение проекта, над которым работаю, я способен самостоятельно учиться и находить решения. Я адаптивен, неплохо работаю в стрессовых ситуациях и могу работать над несколькими задачами одновременно. Для меня дело гораздо важнее слов.</string>
+    <string name="education_text">Университет:\n2006 Бакалавр юрист. Московский университет МВД (Москва, Россия)\n
+\n
+Курсы:\n2020 Курс Java и MySQL (CFP 31, CABA, Argentina)\n2020 Онлайн курс Java (SoloLearn app)\n2020 Курс Python (CFP 11, CABA, Argentina)\n2020 Курс веб-разработки fullstack (Codo a Codo, CABA, Argentina)\n2021 Онлайн курс разработки Android на Kotlin (Udacity)\n2021 Курс React Native и MongoDB (Codo a Codo, Argentina con Udemy y IBM) – в процессе\n
+\n
+Книги:\nBill Phillips, Chris Stewart, Kristin Marsicano :: Android программирование для профессионалов (Java)\nDmitry Jemerov, Svetlana Isakova :: Kotlin в действии\nEric Freeman, Elisabeth Freeman :: Head First Паттерны проектирования\nRobert C. Martin :: Чистый код\nBruce Eckel :: Философия Java\nAditya Bhargava :: Грокаем алгоритмы</string>
+    <string name="hobby_text">Мне нравятся разные вещи, среди прочих:\n- танцевать танго: уже больше десяти лет я занимаюсь этим, у меня была школа танго в России и я несколько проектов в Аргентине, в последнее время это не более чем хобби, я хожу танцевать с друзьями, предпочитаю неформальные милонги;\n- велосипед: я передвигаюсь на нем по городу и в свободное время предпочитаю выбираться за город или в горы с палаткой;\n- делать что-то руками, я работаю с деревом, металлом, что-то связанное с электроникой и т.д.;\n- компьютеры и программирование, в частности, Arduino:  SmartHome или автоматический полив растений.</string>
+    <string name="experience_text">Я только начинаю свой путь программиста. В течение мой жизни я был графическим дизайнером и фотографом, организовал школу танго в России и несколько проектов в Аргентине. В настоящее время я работаю техником холодильного оборудования.\nМои навыки программирования продемонстрированы в этом приложении, я постарался применить здесь наиболее важные технологии, которыми владею. Исходный код можно посмотреть на моей странице на GitHub: yupanov.</string>
+    <string name="about_text">Это приложение создано с двумя целями:\n- рассказать о навыках программиста Юрия Панова (резюме)\n- продемонстрировать применение некоторых технологий (раздел о текущей погоде)</string>
+    <string name="about_weather_text">Эта часть приложения дополняет резюме, является демонстрацией технологий. Здесь происходит следующее:\n- Получение данных о геолокации GPS (Fused location provider, Android permissions)\n- Запрос текущей погоды на сайте openweathermap.org и получение данных в виде JSON (Retrofit2)\n- Расшифровка данных и преобразование в объекты Kotlin (Moshi)\n- Представление на экране (MVVM, Live data, Data binding)</string>
+    <string name="go_to_weather">Перейти к фрагменту о погоде</string>
+    <string name="about_weather_title">Об этом фрагменте</string>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CV Yuri Panov</string>
+    <string name="about_title">Acerca del programa</string>
+    <string name="android_developer">Desarrollador Android</string>
+    <string name="photo_description">Foto personal</string>
+    <string name="name">Yuri Panov</string>
+    <string name="skills_title">Habilidades</string>
+    <string name="experience_title">Experiencia</string>
+    <string name="education_title">Educación</string>
+    <string name="current_weather">Tiempo actual</string>
+    <string name="current_temperature">temperatura actual</string>
+    <string name="description_weather">descripción</string>
+    <string name="max_temperature">maximum</string>
+    <string name="min_temperature">minimum</string>
+    <string name="latitude_lbl">latitud:</string>
+    <string name="longitude_lbl">longitud:</string>
+    <string name="save_weather_data">Guardar datos</string>
+    <string name="show_weather_data">Mostrar datos</string>
+    <string name="refresh_weather_data">Refrescar datos</string>
+    <string name="hobby_title">Hobby</string>
+    <string name="summary_title">Resumen</string>
+    <string name="summary_text">Soy Yuri, nacido en Rusia, vivo en Argentina desde hace siete años. Estoy interesado en la carrera en IT, el desarrollo de aplicaciones para android y mejores prácticas en POO me llaman la atención actualmente más que otras cosas. Terminé varios cursos de programación (Java, Python, Diseño web fullstack, desarrollo para Android con Kotlin) y sigo aprendiendo de forma autodidacta, estoy desarrollando aplicaciones con fines de estudio.\n
+\n
+Algunas tecnologías que manejo:\n- Kotlin, Java, Android SDK\n- Data binding, MVVM y LiveData\n- Navigation\n- RecyclerView y ViewPager2\n- Retrofit (data fetching from the Internet)\n- Room (SQL database library for Android)\n- Fused location provider (GPS)\n- etc.\nTengo conocimientos de Python, JavaScript, C++ (Arduino), React, Bootstrap, Node JS, y React Native.\n
+\n
+Hablo y escribo en siguientes idiomas: ruso, castellano, inglés, portugués.\nA lo largo de mi vida trabajé como diseñador gráfico y fotógrafo, tuve una escuela de tango en Rusia y organicé varios proyectos tangueros en Argentina. Actualmente trabajo como técnico de refrigeración independiente. Soy responsable, comunicable, creativo, autodidacta, buen líder.\n
+\n
+Mis habilidades como programador están demostradas en esta aplicación.</string>
+    <string name="skills_text">Lenguajes de programación:\n- Java\n- Kotlin\n- Python\n- JavaScript, MongoDB\n- C++ (Arduino)\n- MySQL, SQLite\n
+\n
+Tecnologías relacionadas con el desarrollo de apps Android:\n- Android SDK\n- Data binding, MVVM, LiveData\n- Navigation, Safe args\n- Recycler view, ViewPager2\n- Retrofit (data fetching from the Internet)\n- Moshi (JSON parsing)\n- Room (SQL database library for Android)\n- Glide\n- Fused location provider (GPS)\n- React Native (estudiando)\n- etc.\nLa mayoría de estas tecnologías están implementadas en esta aplicación (CV Yuri Panov).\n
+\n
+Hablo y escribo en:\n- ruso\n- castellano\n- inglés\n- portugués\nAdemás tengo ciertos conocimientos de francés y alemán.\n
+\n
+Habilidades blandas (soft skills)\nSoy creativo, honesto, responsable y con visión global de los proyectos. Soy bastante bueno en comunicación, buen líder, tengo experiencia en generar equipos con gente motivada a mi alrededor. Suelo aprender rápido y de forma autodidacta. Puedo enseñar y explicar cosas complicadas con palabras sencillas y de forma ordenada. Trabajo bien en condiciones de estrés, me adapto con facilidad y puedo realizar varias tareas simultáneamente, si me equivoco, me hago cargo. Prefiero las acciones a las palabras.</string>
+    <string name="education_text">Universidad:\n2006 Bachiller, derecho. Universidad del Ministerio del Interior (Moscú, Rusia)\n
+\n
+Cursos:\n2020 Curso de Java y MySQL (CFP 31, CABA, Argentina)\n2020 Curso online de Java (SoloLearn app)\n2020 Curso de Python (CFP 11, CABA, Argentina)\n2020 Curso de desarrollo web fullstack (Codo a Codo, CABA, Argentina)\n2021 Curso online de desarrollo de aplicaciones de Android con Kotlin (Udacity)\n2021 Curso de React Native y MongoDB (Codo a Codo, Argentina con Udemy y IBM) – en proceso\n
+\n
+Libros:\nBill Phillips, Chris Stewart, Kristin Marsicano :: Android Programming (Java)\nDmitry Jemerov, Svetlana Isakova :: Kotlin in action\nEric Freeman, Elisabeth Freeman :: Head First Design Patterns\nRobert C. Martin :: Clean Code\nBruce Eckel :: Thinking in Java\nAditya Bhargava :: Grokking Algorythms</string>
+    <string name="hobby_text">Entre otras cosas me gusta:\n- bailar tango: lo llevo en mi vida desde hace más de diez años, tuve una escuela de tango en Rusia y varios proyectos en Argentina. Últimamente es nada más que un hobby, salgo a bailar con mis amigos a milongas de la ciudad, prefiero las milongas “descontracturadas”;\n- andar en bici: me muevo en bici por la cuidad y cuando vacaciono;\n- hacer algo con mis manos: carpintería, luthería, construcción de muebles, herrería, electrónica etc;\n- computadoras y programación: inventar algo con Arduino, por ejemplo, SmartHome o riego de plantas automático.\n
+
+</string>
+    <string name="experience_text">Estoy recién empezando como programador. Durante mi vida trabajé como diseñador gráfico y fotógrafo, tuve una escuela de tango en Rusia y organicé varios proyectos tangueros en Argentina. Actualmente trabajo como técnico de refrigeración independiente.\nMis habilidades como programador están demostradas en esta aplicación. Traté de aplicar aquí las tecnologías más importantes que manejo, el código fuente se encuentra en mi página de GitHub: yupanov.</string>
+    <string name="about_text">Esta aplicación está creada con dos objetivos:\n- contar sobre las habilidades del programador Yuri Panov (curriculum vitae)\n- mostrar la implementación de unas tecnologías que maneja (la parte de tiempo actual)</string>
+    <string name="about_weather_text">Esta parte de la aplicación complementa al CV y es una muestra de las tecnologías que manejo. Lo que hace:\n- Obtiene la ubicación usando el módulo GPS (Fused location provider, Android permissions)\n- Solicita datos a la página openweathermap.org y recibe el resultado en forma de JSON (Retrofit2)\n- Descifra datos y los convierte en objetos Kotlin (Moshi)\n- Muestra en pantalla los datos recibidos (MVVM, Live data, Data binding)</string>
+    <string name="go_to_weather">Ir al fragmento del clima</string>
+    <string name="about_weather_title">Acerca de este fragmento</string>
+</resources>

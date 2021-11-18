@@ -1,28 +1,19 @@
 <resources>
     <string name="app_name">Resume Yuri Panov</string>
-    <string name="menu_about">About</string>
+    <string name="about_title">About</string>
+    <string name="about_text">This application is created with two purposes:\n- to tell about the skills of the programmer Yuri Panov (Resume)\n- to show the implementation of some of the technologies (The Current Weather part)</string>
     <string name="android_developer">android developer</string>
-    <string name="skills_android_summary">Java, Kotlin, SQLite</string>
-    <string name="skills_IDE_summary">Android Studio, Visual Studio Code</string>
-    <string name="skills_other_summary">Python, JavaScript, C++ (Arduino), MySQL, HTML, CSS, React, NodeJS, Bootstrap, Git
-</string>
     <string name="photo_description">Personal Photo</string>
     <string name="name">Yuri Panov</string>
-    <string name="skills_button_label">Skills</string>
-    <string name="contacts_button_label">Contacts</string>
-    <string name="more_button_label">More about me</string>
-    <string name="experience_button_label">Experience</string>
-    <string name="education_button_label">Education</string>
-    <string name="title">Title</string>
-    <string name="description">Description</string>
-    <string name="title_activity_fullscreen_photo">FullscreenActivity</string>
-    <string name="large_photo">Large personal photo</string>
-    <string name="hobby_button">Hobby button</string>
-    <string name="temp24">24\u00B0C</string>
-    <string name="temp">%1$s\u00B0C</string>
-    <string name="caba">Cuidad Autónoma de Buenos Aires</string>
-    <string name="current_weaher">Current weaher</string>
-    <string name="weather_description">sunny</string>
+    <string name="skills_title">Skills</string>
+    <string name="experience_title">Experience</string>
+    <string name="education_title">Education</string>
+    <string name="hobby_title">Hobby</string>
+    <string name="temp24" translatable="false">24\u00B0C</string>
+    <string name="temp" translatable="false">%1$s\u00B0C</string>
+    <string name="caba" translatable="false">Cuidad Autónoma de Buenos Aires</string>
+    <string name="current_weather">Current weather</string>
+    <string name="weather_description" translatable="false">sunny</string>
     <string name="current_temperature">current temperature</string>
     <string name="description_weather">description</string>
     <string name="max_temperature">maximum</string>
@@ -30,13 +21,28 @@
     <string name="location_permission_granted">Location permission granted</string>
     <string name="location_permission_denied">Location permission denied</string>
     <string name="location_access_required">Unable to update location without permission.</string>
-    <string name="ok">OK</string>
+    <string name="ok" translatable="false">OK</string>
     <string name="location_permission_not_available">Location permission is not available</string>
     <string name="latitude_lbl">latitude:</string>
     <string name="longitude_lbl">longitude:</string>
     <string name="save_weather_data">Save weather data</string>
     <string name="show_weather_data">Show weather data</string>
     <string name="refresh_weather_data">Refresh data</string>
-
+    <string name="go_to_weather">Go to the weather fragment</string>
+    <string name="about_weather_title">About this fragment</string>
+    <string name="summary_title">Summary</string>
+    <string name="summary_text">I was born in Russia and for the last 7 years I live in Buenos Aires. I’m interested in a career in IT because I find it challenging and interesting. Android developing and the best practices in POO are my main focuses. I’ve finished several programming courses (Java, Python, web design full stack, Android Apps development with Kotlin), I continue studying on my own and I’m developing applications for learning purposes.\n
+\nSome technologies which I use:\n- Kotlin, Java, Android SDK\n- Data binding, MVVM and LiveData\n- Navigation\n- RecyclerView and ViewPager2\n- Retrofit (data fetching from the Internet)\n- Room (SQL database library for Android)\n- Fused location provider (GPS)\n- etc.\nI have also worked with Python, JavaScript, C++ (Arduino), React, Bootstrap, Node JS, React Native.\n
+\nI speak and write in Russian, Spanish, English, Portuguese languages.\nI worked as a graphic designer and a photographer, I organized a tango school in Russia and Argentina.\nI’m responsible, communicable, creative, autodidact, a good leader.\n
+\nMy programmer skills are shown in this app.</string>
+    <string name="skills_text">Programming languages:\n- Java\n- Kotlin\n- Python\n- JavaScript\n- C++ (Arduino)\n- MySQL, SQLite\n
+\nTechnologies related to the apps development for Android:\n- Android SDK\n- Data binding, MVVM, LiveData\n- Navigation, Safe args\n- Recycler view, ViewPager2\n- Retrofit (data fetching from the Internet)\n- Moshi (JSON parsing)\n- Room (SQL database library for Android)\n- Glide (Internet images library)\n- Fused location provider (GPS)\n- React Native (studying)\n- etc.\nThe most of them are implemented in this application (Resume Yuri Panov).\n
+\nI speak and write in:\n- Russian\n- Spanish\n- English\n- Portuguese\nAlso I have some knowledge of French and German.\n
+\nSoft skills\nI am sociable, honest and responsible. I have experience forming motivated teams around me, I can teach, explain structurally difficult things with simple words. I have a global vision of the project I’m working on, autodidact, I learn fast and I can find solutions on my own. I have a creative mind with the ability to adapt and I work well under pressure. For me actions are more important than words.</string>
+    <string name="education_text">University:\n2006 Bachelors degree in Law. Moscow University of the Ministry of Internal Affairs (Moscow, Russia)\n\nCourses:\n2020 Java and MySQL course (CFP 31, CABA, Argentina)\n2020 Java online course (SoloLearn app)\n2020 Python course (CFP 11, CABA, Argentina)\n2020 Web design full stack course (Codo a Codo, CABA, Argentina)\n2021 Application development for Android with Kotlin (Udacity)\n2021 React Native and MongoDB course (Codo a Codo, Argentina con Udemy y IBM) – in process\n\nBooks:\nBill Phillips, Chris Stewart, Kristin Marsicano :: Android Programming (Java)\nDmitry Jemerov, Svetlana Isakova :: Kotlin in action\nEric Freeman, Elisabeth Freeman :: Head First Design Patterns\nRobert C. Martin :: Clean Code\nBruce Eckel :: Thinking in Java\nAditya Bhargava :: Grokking Algorythms</string>
+    <string name="hobby_text">I like different things, among others:\n- I have danced tango for more than ten years, I organized a tango school in Russia and several projects in Argentina. Now it’s nothing more than just a hobby, I dance with my friends, preferring small “decontracted” milongas.\n- cycling: I ride my bike through the city and I like to go on vacations to the mountains.\n- crafting something: carpentry, lutheria, electronics etc.\n- computers y programming: I like to invent something with Arduino, e.g. SmartHome or automatic watering of plants.</string>
+    <string name="experience_text">I’m just starting my IT career. During my life I was a graphic designer and photographer, I had a tango school in Russia and various tango projects in Argentina. Currently I work as refrigeration technician by myself.
+\nMy programmer skills are shown in this app, I tried to implement here the most important technologies, the source code is on my GitHub page: yupanov.</string>
+    <string name="about_weather_text">This part of the app complements the resume, it’s a demo of my skills. What happens here:\n- Fetching the location data using GPS (Fused location provider, Android permissions)\n- Requiring the data from openweathermap.org and receiving it as JSON (Retrofit2)\n- Converting the data to the Kotlin objects (Moshi)\n- Showing data on the screen (MVVM, Live data, Data binding)</string>
 
 </resources>
