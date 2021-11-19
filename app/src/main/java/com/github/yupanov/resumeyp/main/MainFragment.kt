@@ -37,6 +37,9 @@ class MainFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         binding.viewModel = viewModel
 
+        binding.containerPersonal.setOnClickListener { view ->
+            view.findNavController().navigate(R.id.action_mainFragment_to_contactsFragment)
+        }
         binding.ivSmallPhoto.setOnClickListener { view ->
             view.findNavController().navigate(R.id.action_mainFragment_to_largePhotoFragment)
         }

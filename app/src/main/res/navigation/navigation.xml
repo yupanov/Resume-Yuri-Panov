@@ -32,6 +32,9 @@
         <action
             android:id="@+id/action_mainFragment_to_aboutWeatherFragment"
             app:destination="@id/aboutWeatherFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_contactsFragment"
+            app:destination="@id/contactsFragment" />
     </fragment>
     <fragment
         android:id="@+id/weatherFragment"
@@ -71,4 +74,8 @@
             app:destination="@id/weatherFragment"
             app:popUpTo="@id/mainFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.github.yupanov.resumeyp.main.ContactsFragment"
+        android:label="ContactsFragment" />
 </navigation>

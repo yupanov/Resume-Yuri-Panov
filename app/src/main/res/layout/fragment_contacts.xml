@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primaryLightColor">
+
+
+        <TextView android:id="@+id/tvContactsTitle"
+            style="@style/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/contacts_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/container_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_normal"
+            android:paddingBottom="@dimen/margin_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvContactsTitle">
+
+            <ImageView
+                android:id="@+id/ivContactsAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:src="@drawable/ic_baseline_location_city_24"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvContactsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:text="@string/contacts_text"
+                app:layout_constraintBottom_toBottomOf="@+id/ivContactsAddress"
+                app:layout_constraintStart_toEndOf="@+id/ivContactsAddress"
+                app:layout_constraintTop_toTopOf="@+id/ivContactsAddress"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/container_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_normal"
+            android:paddingTop="@dimen/margin_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container_address">
+
+            <ImageView
+                android:id="@+id/ivContactsPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:src="@drawable/ic_whatsapp_glyph_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvContactsPhoneTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:text="@string/phone_title"
+                app:layout_constraintBottom_toBottomOf="@+id/ivContactsPhone"
+                app:layout_constraintStart_toEndOf="@+id/ivContactsPhone"
+                app:layout_constraintTop_toTopOf="@+id/ivContactsPhone" />
+
+            <TextView
+                android:id="@+id/tvContactsPhoneText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/phone_text"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvContactsPhoneTitle"
+                app:layout_constraintStart_toEndOf="@+id/tvContactsPhoneTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/container_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_normal"
+            android:paddingTop="@dimen/margin_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container_phone">
+
+            <ImageView
+                android:id="@+id/ivContactsEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:src="@drawable/ic_baseline_alternate_email_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvContactsEmailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:text="@string/email_title"
+                app:layout_constraintBottom_toBottomOf="@+id/ivContactsEmail"
+                app:layout_constraintStart_toEndOf="@+id/ivContactsEmail"
+                app:layout_constraintTop_toTopOf="@+id/ivContactsEmail" />
+
+            <TextView
+                android:id="@+id/tvContactsEmailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/email_text"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvContactsEmailTitle"
+                app:layout_constraintStart_toEndOf="@+id/tvContactsEmailTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/container_linkedin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_normal"
+            android:paddingTop="@dimen/margin_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container_email">
+
+            <ImageView
+                android:id="@+id/ivContactsLinkedIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:src="@drawable/ic_linkedin_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvContactsLinkedInTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:text="@string/linkedin_title"
+                app:layout_constraintBottom_toBottomOf="@+id/ivContactsLinkedIn"
+                app:layout_constraintStart_toEndOf="@+id/ivContactsLinkedIn"
+                app:layout_constraintTop_toTopOf="@+id/ivContactsLinkedIn" />
+
+            <TextView
+                android:id="@+id/tvContactsLinkedInText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/yupanov"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvContactsLinkedInTitle"
+                app:layout_constraintStart_toEndOf="@+id/tvContactsLinkedInTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/container_github"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_normal"
+            android:paddingTop="@dimen/margin_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container_linkedin">
+
+            <ImageView
+                android:id="@+id/ivContactsGitHub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:src="@drawable/ic_github_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvContactsGitHubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:text="@string/github_title"
+                app:layout_constraintBottom_toBottomOf="@+id/ivContactsGitHub"
+                app:layout_constraintStart_toEndOf="@+id/ivContactsGitHub"
+                app:layout_constraintTop_toTopOf="@+id/ivContactsGitHub" />
+
+            <TextView
+                android:id="@+id/tvContactsGitHubText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/yupanov"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvContactsGitHubTitle"
+                app:layout_constraintStart_toEndOf="@+id/tvContactsGitHubTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

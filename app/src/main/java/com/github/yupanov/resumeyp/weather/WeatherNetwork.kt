@@ -14,9 +14,11 @@ private const val BASE_URL = "https://api.openweathermap.org/data/2.5/"
 val KEY = "49ed19ec9ab199a10d8e2629b7b77c8a"
 val UNITS = "metric"
 var lang = Locale.getDefault().getDisplayLanguage()
+
 private val moshi = Moshi.Builder() // JSON adapter for retrofit
     .add(KotlinJsonAdapterFactory())
     .build()
+
 private val retrofit = Retrofit.Builder()
     .addConverterFactory(MoshiConverterFactory.create(moshi))
     .addCallAdapterFactory(CoroutineCallAdapterFactory())

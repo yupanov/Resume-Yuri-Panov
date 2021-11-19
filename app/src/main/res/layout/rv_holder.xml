@@ -24,6 +24,7 @@
                     android:layout_gravity="bottom|center"
                     tools:text="@string/skills_title"
                     style="@style/title"
+                    android:textSize="18sp"
                     />
 
                 <TextView
