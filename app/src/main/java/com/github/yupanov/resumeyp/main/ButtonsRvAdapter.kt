@@ -37,6 +37,7 @@ class ButtonsRvAdapter(resources: Resources) : RecyclerView.Adapter<ButtonsRvAda
         val tvTitle = binding.tvRvTitle
         val container = binding.containerRv
         val tvDescription = binding.tvRvDescription
+        val ivIcon = binding.ivRvIcon
 
         companion object{
             fun getHolder(parent: ViewGroup): ButtonsHolder {
@@ -49,6 +50,15 @@ class ButtonsRvAdapter(resources: Resources) : RecyclerView.Adapter<ButtonsRvAda
         fun bind(curData: Info, position: Int) {
             tvTitle.text = curData.title
             tvDescription.text = curData.description
+            ivIcon.setImageResource(when (curData.title) {
+                "Summary" -> R.drawable.ic_summary
+                "Skills" -> R.drawable.ic_skills
+                "Education" -> R.drawable.ic_education
+                "Experience" -> R.drawable.ic_experience
+                "Hobby" -> R.drawable.ic_hobby
+                else -> R.drawable.ic_summary
+            })
+
             container.setOnClickListener { view ->
                 view.findNavController()
                     .navigate(MainFragmentDirections.actionMainFragmentToInfoFragment(position))

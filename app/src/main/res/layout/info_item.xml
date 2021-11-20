@@ -9,36 +9,45 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/primaryLightColor">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            >
 
             <ImageView
                 android:id="@+id/iv_info"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
                 android:background="@color/secondaryLightColor"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
+                android:paddingStart="@dimen/margin_normal"
+                android:paddingBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_info_title"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_hobby" />
 
             <TextView
                 android:id="@+id/tv_info_title"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:paddingStart="@dimen/margin_normal"
-                android:paddingTop="@dimen/margin_normal"
-                android:paddingEnd="@dimen/margin_normal"
-                android:textSize="@dimen/large_text"
-                android:background="@color/secondaryLightColor"
+                style="@style/title"
+                android:paddingBottom="@dimen/margin_normal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/iv_info" />
+                app:layout_constraintStart_toEndOf="@+id/iv_info"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/skills_title" />
 
+            <View
+                android:layout_height="5dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_info_title"
+                style="@style/divder" />
 
             <TextView
                 android:id="@+id/tv_info_description"
@@ -50,7 +59,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_info_title" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_info_title"
+                tools:text="@string/skills_text" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

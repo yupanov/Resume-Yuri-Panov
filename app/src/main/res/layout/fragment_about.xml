@@ -16,11 +16,19 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             style="@style/title"
-            android:paddingTop="@dimen/margin_normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:text="@string/about_title" />
+
+        <View
+            android:layout_height="5dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/tvAboutTitle"
+            style="@style/divder" />
 
         <TextView
             android:id="@+id/tvAboutText"

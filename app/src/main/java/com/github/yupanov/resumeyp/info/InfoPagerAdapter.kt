@@ -49,7 +49,14 @@ class InfoPagerAdapter(resources: Resources): RecyclerView.Adapter<InfoPagerAdap
         fun bind(curData: Info) {
             tvTitle.text = curData.title
             tvDescription.text = curData.description
-            iv.setImageResource(R.drawable.silla)
+            iv.setImageResource(when (curData.title) {
+                "Summary" -> R.drawable.ic_summary
+                "Skills" -> R.drawable.ic_skills
+                "Education" -> R.drawable.ic_education
+                "Experience" -> R.drawable.ic_experience
+                "Hobby" -> R.drawable.ic_hobby
+                else -> R.drawable.ic_summary
+            })
         }
     }
 }

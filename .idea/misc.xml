@@ -28,24 +28,30 @@
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/drawable/ic_baseline_contact_phone_24.xml" value="0.28958333333333336" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/drawable/ic_baseline_contacts_24.xml" value="0.17962962962962964" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/drawable/ic_baseline_location_city_24.xml" value="0.28958333333333336" />
+        <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/drawable/ic_education.xml" value="0.28958333333333336" />
+        <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/drawable/ic_experience.xml" value="0.28958333333333336" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/drawable/ic_github_logo.xml" value="0.17962962962962964" />
+        <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/drawable/ic_hobby.xml" value="0.28958333333333336" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/drawable/ic_launcher_background.xml" value="0.28958333333333336" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/drawable/ic_linkedin_logo.xml" value="0.28958333333333336" />
+        <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/drawable/ic_skills.xml" value="0.28958333333333336" />
+        <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/drawable/ic_summary.xml" value="0.28958333333333336" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/drawable/ic_whatsapp_glyph_black.xml" value="0.28958333333333336" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/layout/activity_fullscreen_photo.xml" value="0.1078125" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/layout/activity_main.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/layout/container_title.xml" value="0.2734375" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/layout/fragment_about.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/layout/fragment_about_weather.xml" value="0.5" />
-        <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/layout/fragment_contacts.xml" value="0.4378648874061718" />
+        <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/layout/fragment_contacts.xml" value="0.1" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/layout/fragment_demo_collection.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/layout/fragment_info_pager.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/layout/fragment_large_photo.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/layout/fragment_main.xml" value="0.4976303317535545" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/layout/fragment_weather.xml" value="0.375" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/layout/fragment_weather_description.xml" value="0.2734375" />
-        <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/layout/info_item.xml" value="0.165625" />
+        <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/layout/info_item.xml" value="0.32222222222222224" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/layout/main_fragment.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/layout/rv_holder.xml" value="0.5" />
+        <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/layout/rv_holder.xml" value="0.36416184971098264" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/menu/main_fragment.xml" value="0.2734375" />
         <entry key="..\:/Users/Yuri/Documents/GitHub/Resume-Yuri-Panov/app/src/main/res/menu/weather_fragment.xml" value="0.2734375" />
       </map>

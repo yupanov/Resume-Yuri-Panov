@@ -8,30 +8,41 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerContacts"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/primaryLightColor">
+        android:background="@color/primaryLightColor"
+        >
 
 
-        <TextView android:id="@+id/tvContactsTitle"
+        <TextView
+            android:id="@+id/tvContactsTitle"
             style="@style/title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/contacts_title"
             app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/contacts_title"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/container_address"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:paddingTop="@dimen/margin_normal"
-            android:paddingBottom="@dimen/margin_normal"
+        <View
+            android:layout_height="5dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/tvContactsTitle"
+            style="@style/divder" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_address"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvContactsTitle">
+            app:layout_constraintTop_toBottomOf="@+id/tvContactsTitle"
+            style="@style/contacts_container">
 
             <ImageView
                 android:id="@+id/ivContactsAddress"
@@ -39,8 +50,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_normal"
                 android:src="@drawable/ic_baseline_location_city_24"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tvContactsText"
@@ -50,17 +61,20 @@
                 android:text="@string/contacts_text"
                 app:layout_constraintBottom_toBottomOf="@+id/ivContactsAddress"
                 app:layout_constraintStart_toEndOf="@+id/ivContactsAddress"
-                app:layout_constraintTop_toTopOf="@+id/ivContactsAddress"/>
+                app:layout_constraintTop_toTopOf="@+id/ivContactsAddress" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/container_phone"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/margin_normal"
-            android:paddingTop="@dimen/margin_normal"
+        <View
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/container_address"
+            style="@style/divder" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_phone"
+            style="@style/contacts_container"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/container_address">
 
@@ -93,11 +107,15 @@
                 app:layout_constraintStart_toEndOf="@+id/tvContactsPhoneTitle" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/container_email"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/margin_normal"
-            android:paddingTop="@dimen/margin_normal"
+        <View
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/container_phone"
+            style="@style/divder" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_email"
+            style="@style/contacts_container"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -132,11 +150,15 @@
                 app:layout_constraintStart_toEndOf="@+id/tvContactsEmailTitle" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/container_linkedin"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/margin_normal"
-            android:paddingTop="@dimen/margin_normal"
+        <View
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/container_email"
+            style="@style/divder" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_linkedin"
+            style="@style/contacts_container"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -171,11 +193,15 @@
                 app:layout_constraintStart_toEndOf="@+id/tvContactsLinkedInTitle" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/container_github"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/margin_normal"
-            android:paddingTop="@dimen/margin_normal"
+        <View
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/container_linkedin"
+            style="@style/divder" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_github"
+            style="@style/contacts_container"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -209,6 +235,13 @@
                 app:layout_constraintBaseline_toBaselineOf="@+id/tvContactsGitHubTitle"
                 app:layout_constraintStart_toEndOf="@+id/tvContactsGitHubTitle" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/container_github"
+            style="@style/divder" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -33,4 +33,6 @@
     <string name="contacts_text">Argentina, CABA, barrio de San Cristóbal</string>
     <string name="phone_title">Teléfono:</string>
     <string name="email_title">Correo electrónico:</string>
+    <string name="email_subject">Email de la app CV Yuri Panov</string>
+    <string name="email_body">¡Hola Yuri!</string>
 </resources>

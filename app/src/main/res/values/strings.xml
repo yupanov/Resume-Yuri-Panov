@@ -53,5 +53,7 @@
     <string name="linkedin_title" translatable="false">LinkedIn:</string>
     <string name="yupanov" translatable="false">yupanov</string>
     <string name="github_title" translatable="false">GitHub:</string>
+    <string name="email_subject">Email from the app Yuri Panov Resume</string>
+    <string name="email_body">Hi Yuri!</string>
 
 </resources>

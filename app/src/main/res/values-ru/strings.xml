@@ -37,4 +37,6 @@
     <string name="contacts_text">Аргентина, Буэнос-Айрес, район Сан Кристобаль</string>
     <string name="phone_title">Телефон:</string>
     <string name="email_title">Электронная почта:</string>
+    <string name="email_subject">Имейл из приложения Резюме Юрия Панова</string>
+    <string name="email_body">Привет, Юрий!</string>
 </resources>

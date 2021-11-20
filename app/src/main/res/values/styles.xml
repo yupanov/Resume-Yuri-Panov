@@ -12,11 +12,27 @@
     <style name="title">
         <item name="android:background">@color/secondaryLightColor</item>
         <item name="android:layout_marginBottom">8dp</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">@dimen/large_text</item>
+        <item name="android:textColor">@color/secondaryDarkColor</item>
         <item name="android:paddingStart">@dimen/margin_normal</item>
         <item name="android:paddingEnd">@dimen/margin_normal</item>
         <item name="android:paddingTop">@dimen/margin_normal</item>
         <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="divder">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">3dp</item>
+        <item name="android:layout_marginStart">@dimen/margin_normal</item>
+        <item name="android:layout_marginEnd">@dimen/margin_normal</item>
+        <item name="android:background">@color/secondaryDarkColor</item>
+    </style>
+
+    <style name="contacts_container">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
     </style>
 
 </resources>
