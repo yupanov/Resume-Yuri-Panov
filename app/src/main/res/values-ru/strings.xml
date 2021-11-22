@@ -8,7 +8,7 @@
     <string name="skills_title">Навыки</string>
     <string name="experience_title">Опыт</string>
     <string name="education_title">Образование</string>
-    <string name="current_weather">Текущая погода</string>
+    <string name="weather">Погода</string>
     <string name="current_temperature">текущая температура</string>
     <string name="description_weather">описание</string>
     <string name="max_temperature">максимум</string>

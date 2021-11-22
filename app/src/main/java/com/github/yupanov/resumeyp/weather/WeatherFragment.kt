@@ -15,6 +15,7 @@ import com.github.yupanov.resumeyp.R
 import com.github.yupanov.resumeyp.databinding.FragmentWeatherBinding
 import com.github.yupanov.resumeyp.weather.database.WeatherDatabase
 import com.google.android.material.snackbar.Snackbar
+import java.util.*
 
 
 class WeatherFragment : Fragment() {
@@ -95,8 +96,16 @@ class WeatherFragment : Fragment() {
     private fun startWeather() {
         weatherViewModel.weather.observe( viewLifecycleOwner, {
             binding.apply {
-                tvLocation.text = it.locationName
-                tvDescription.text = it.description
+                tvLocation.text = it.locationName.replaceFirstChar {
+                    if (it.isLowerCase()) it.titlecase(
+                        Locale.getDefault()
+                    ) else it.toString()
+                }
+                tvDescription.text = it.description.replaceFirstChar {
+                    if (it.isLowerCase()) it.titlecase(
+                        Locale.getDefault()
+                    ) else it.toString()
+                }
                 tvCurrentTemp.text = getString(R.string.temp, "%.1f".format(it.temperature))
                 tvMinTemp.text = getString(R.string.temp, "%.1f".format(it.min))
                 tvMaxTemp.text = getString(R.string.temp, "%.1f".format(it.max))

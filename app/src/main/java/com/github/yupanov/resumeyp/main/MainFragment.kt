@@ -8,6 +8,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.github.yupanov.resumeyp.R
 import com.github.yupanov.resumeyp.databinding.FragmentMainBinding
+import com.github.yupanov.resumeyp.isWeatherAboutShown
 
 class MainFragment : Fragment() {
 
@@ -44,7 +45,11 @@ class MainFragment : Fragment() {
             view.findNavController().navigate(R.id.action_mainFragment_to_largePhotoFragment)
         }
         binding.btWeather.setOnClickListener { view ->
-            view.findNavController().navigate(R.id.action_mainFragment_to_weatherFragment)
+            if (isWeatherAboutShown) {
+                view.findNavController().navigate(R.id.action_mainFragment_to_weatherFragment)
+            } else {
+                view.findNavController().navigate(R.id.action_mainFragment_to_aboutWeatherFragment)
+            }
         }
 
         val adapter = ButtonsRvAdapter(resources)

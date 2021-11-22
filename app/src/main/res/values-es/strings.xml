@@ -8,7 +8,7 @@
     <string name="skills_title">Habilidades</string>
     <string name="experience_title">Experiencia</string>
     <string name="education_title">Educación</string>
-    <string name="current_weather">Tiempo actual</string>
+    <string name="weather">Tiempo</string>
     <string name="current_temperature">temperatura actual</string>
     <string name="description_weather">descripción</string>
     <string name="max_temperature">maximum</string>

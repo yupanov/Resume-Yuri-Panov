@@ -12,7 +12,7 @@
     <string name="temp24" translatable="false">24\u00B0C</string>
     <string name="temp" translatable="false">%1$s\u00B0C</string>
     <string name="caba" translatable="false">Cuidad Autónoma de Buenos Aires</string>
-    <string name="current_weather">Current weather</string>
+    <string name="weather">Weather</string>
     <string name="weather_description" translatable="false">sunny</string>
     <string name="current_temperature">current temperature</string>
     <string name="description_weather">description</string>
