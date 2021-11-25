@@ -39,4 +39,6 @@
     <string name="email_title">Электронная почта:</string>
     <string name="email_subject">Имейл из приложения Резюме Юрия Панова</string>
     <string name="email_body">Привет, Юрий!</string>
+    <string name="weather_history">История погоды</string>
+    <string name="clear_data">Очистить</string>
 </resources>

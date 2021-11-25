@@ -2,15 +2,12 @@ package com.github.yupanov.resumeyp.main
 
 import android.content.res.Resources
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
-import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.github.yupanov.resumeyp.R
-import com.github.yupanov.resumeyp.databinding.RvHolderBinding
+import com.github.yupanov.resumeyp.databinding.RvMainHolderBinding
 import com.github.yupanov.resumeyp.info.Info
 import com.github.yupanov.resumeyp.info.infoBase
 
@@ -33,7 +30,7 @@ class ButtonsRvAdapter(resources: Resources) : RecyclerView.Adapter<ButtonsRvAda
     override fun getItemCount() = data.size
 
 
-    class ButtonsHolder private constructor(binding: RvHolderBinding) : ViewHolder(binding.root) {
+    class ButtonsHolder private constructor(binding: RvMainHolderBinding) : ViewHolder(binding.root) {
         val tvTitle = binding.tvRvTitle
         val container = binding.containerRv
         val tvDescription = binding.tvRvDescription
@@ -42,7 +39,7 @@ class ButtonsRvAdapter(resources: Resources) : RecyclerView.Adapter<ButtonsRvAda
         companion object{
             fun getHolder(parent: ViewGroup): ButtonsHolder {
                 val inflater = LayoutInflater.from(parent.context)
-                val binding = RvHolderBinding.inflate(inflater)
+                val binding = RvMainHolderBinding.inflate(inflater)
                 return ButtonsHolder(binding)
             }
         }

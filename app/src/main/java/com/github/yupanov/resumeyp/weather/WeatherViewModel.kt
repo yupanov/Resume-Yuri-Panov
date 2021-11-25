@@ -13,7 +13,7 @@ class WeatherViewModel(private val dataSource: WeatherDao, application: Applicat
     private var weatherShort: Weather? = null
     private val TAG = "WeatherViewModel"
 
-//    private val id = "3433955" // Buenos Aires
+    //    private val id = "3433955" // Buenos Aires
     lateinit var lat: String
     lateinit var lon: String
 
@@ -25,9 +25,10 @@ class WeatherViewModel(private val dataSource: WeatherDao, application: Applicat
     val weather: LiveData<Weather>
         get() = _weather
 
-    private var weatherData = dataSource.selectWeatherByTime() //0L, System.currentTimeMillis()
+    var timeFrom: Long = 0L
 
-    val weatherDataToText = Transformations.map(weatherData) { weatherDataToText(it) }
+    val weatherData: LiveData<List<Weather>> =
+        dataSource.selectWeatherByTime(timeFrom, System.currentTimeMillis())
 
 
     init {
@@ -47,36 +48,28 @@ class WeatherViewModel(private val dataSource: WeatherDao, application: Applicat
                     weatherFromJson.weather[0].description,
                     weatherFromJson.main.temp,
                     weatherFromJson.main.tempMin,
-                    weatherFromJson.main.tempMax)
+                    weatherFromJson.main.tempMax
+                )
                 _weather.value = weatherShort!!
                 _status.value = WeatherStatus.DONE
             } catch (e: Exception) {
                 _status.value = WeatherStatus.ERROR
-                _weather.value = e.message?.let { Weather(0L,"error", it, 0F, 0F, 0F) }
+                _weather.value = e.message?.let { Weather(0L, "error", it, 0F, 0F, 0F) }
             }
         }
     }
 
     fun saveWeatherData() {
         viewModelScope.launch {
-            weatherShort?.let {
-                Log.i(TAG, it.description)
-                dataSource.insert(it)
-            }
+            weatherShort?.let { dataSource.insertWeather(it) }
         }
     }
 
-    private fun weatherDataToText(listWeather: List<Weather>): String {
-        var dataString = ""
-        listWeather.forEach {
-            val time = it.time
-            dataString += time
-            dataString += "\n"
-        }
-        return dataString
+    fun clearWeatherData() {
+        viewModelScope.launch { dataSource.clear() }
     }
+
 }
-
 
 enum class WeatherStatus { LOADING, ERROR, DONE }
 

@@ -5,6 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.github.yupanov.resumeyp.R
+import java.text.SimpleDateFormat
 
 @BindingAdapter("weather_status")
 fun bindWeatherStatus(statusImageView: ImageView, weatherStatus: WeatherStatus) {

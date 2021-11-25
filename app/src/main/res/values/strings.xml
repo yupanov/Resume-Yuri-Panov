@@ -13,7 +13,7 @@
     <string name="temp" translatable="false">%1$s\u00B0C</string>
     <string name="caba" translatable="false">Cuidad Autónoma de Buenos Aires</string>
     <string name="weather">Weather</string>
-    <string name="weather_description" translatable="false">sunny</string>
+    <string name="sunny" translatable="false">sunny</string>
     <string name="current_temperature">current temperature</string>
     <string name="description_weather">description</string>
     <string name="max_temperature">maximum</string>
@@ -55,5 +55,7 @@
     <string name="github_title" translatable="false">GitHub:</string>
     <string name="email_subject">Email from the app Yuri Panov Resume</string>
     <string name="email_body">Hi Yuri!</string>
+    <string name="weather_history">Weather history</string>
+    <string name="clear_data">Clear</string>
 
 </resources>

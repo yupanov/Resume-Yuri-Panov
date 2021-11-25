@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryLightColor"
+        android:padding="@dimen/margin_normal"
+        android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="12:00" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvHistoryLocation"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    tools:text="Congreso" />
+
+                <TextView
+                    android:id="@+id/tvHistoryTemp"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/large_text"
+                    tools:text="@string/temp24" />
+
+                <TextView
+                    android:id="@+id/tvHistoryDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    tools:text="@string/sunny" />
+            </LinearLayout>
+
+
+            <View
+                style="@style/divder"
+                android:layout_width="match_parent"
+                android:layout_margin="0dp"/>
+
+    </LinearLayout>
+
+</layout>

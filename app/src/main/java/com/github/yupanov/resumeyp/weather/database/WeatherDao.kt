@@ -10,10 +10,10 @@ import com.github.yupanov.resumeyp.weather.Weather
 @Dao
 interface WeatherDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(weather: Weather)
+    suspend fun insertWeather(weather: Weather): Long
 
-    @Query("SELECT * FROM weather_table") // WHERE time BETWEEN :fromTime AND :toTime ORDER BY time DESC"
-    fun selectWeatherByTime(): LiveData<List<Weather>> // fromTime: Long, toTime: Long
+    @Query("SELECT * FROM weather_table WHERE time BETWEEN :fromTime AND :toTime ORDER BY time DESC")
+    fun selectWeatherByTime(fromTime: Long, toTime: Long): LiveData<List<Weather>>
 
     @Query("DELETE FROM weather_table")
     suspend fun clear()

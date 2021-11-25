@@ -35,4 +35,6 @@
     <string name="email_title">Correo electrónico:</string>
     <string name="email_subject">Email de la app CV Yuri Panov</string>
     <string name="email_body">¡Hola Yuri!</string>
+    <string name="weather_history">Historia del tiempo</string>
+    <string name="clear_data">Borrar</string>
 </resources>

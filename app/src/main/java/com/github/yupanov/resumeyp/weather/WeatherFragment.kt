@@ -56,6 +56,8 @@ class WeatherFragment : Fragment() {
         binding = FragmentWeatherBinding.inflate(inflater)
         binding.lifecycleOwner = this
         binding.viewModel = weatherViewModel
+
+
         return binding.root
     }
 
@@ -65,22 +67,22 @@ class WeatherFragment : Fragment() {
         startLocation()
         startWeather()
         binding.apply {
-            btShowData.setOnClickListener { showDatabase() }
             btSaveData.setOnClickListener {
                 weatherViewModel.saveWeatherData()
-                btSaveData.visibility = View.INVISIBLE
             }
-            btRefreshData.setOnClickListener {
-                weatherViewModel.fetchWeather()
-                btSaveData.visibility = View.VISIBLE
+            btClearData.setOnClickListener {
+                weatherViewModel.clearWeatherData()
             }
+            val adapter = WeatherHistoryAdapter()
+            binding.rvWeatherHistory.adapter = adapter
+
+            weatherViewModel.weatherData.observe(viewLifecycleOwner, {
+                adapter.weatherData = it
+            })
+
         }
     }
 
-    private fun showDatabase() {
-        val dataString = weatherViewModel.weatherDataToText.value
-        binding.tvDatabase.text = dataString
-    }
 
     private fun startLocation() {
         // Check if the Location permission has been granted

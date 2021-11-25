@@ -44,10 +44,10 @@ class DbTest {
     @Throws(Exception::class)
     fun insertAndGetWeather() = runBlocking {
         val weather = Weather(System.currentTimeMillis(),"location", "descr", 0F, 0F, 0F)
-        dao.insert(weather)
+        dao.insertWeather(weather)
         val weatherHistory = dao.selectWeatherByTime()
         val listWeather = weatherHistory.value
         val first = listWeather?.get(0)
-        assertEquals(first?.description, "descr")
+        assertEquals("descr", first?.description )
     }
 }

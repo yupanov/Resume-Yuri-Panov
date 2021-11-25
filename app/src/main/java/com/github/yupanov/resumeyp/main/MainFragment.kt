@@ -12,8 +12,6 @@ import com.github.yupanov.resumeyp.isWeatherAboutShown
 
 class MainFragment : Fragment() {
 
-    private lateinit var viewModel: MainViewModel
-
     // Menu:
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,11 +31,8 @@ class MainFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View {
+
         val binding = FragmentMainBinding.inflate(inflater)
-
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        binding.viewModel = viewModel
-
         binding.containerPersonal.setOnClickListener { view ->
             view.findNavController().navigate(R.id.action_mainFragment_to_contactsFragment)
         }

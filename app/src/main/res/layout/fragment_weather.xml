@@ -66,11 +66,11 @@
             tools:text="@string/caba" />
 
         <View
+            style="@style/divder"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_lbl_latitude"
-            android:layout_marginTop="8dp"
-            style="@style/divder" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_lbl_latitude" />
 
 
         <TextView
@@ -113,11 +113,11 @@
             tools:text="0.0" />
 
         <View
+            style="@style/divder"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_current_temp_label"
-            android:layout_marginTop="8dp"
-            style="@style/divder" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_current_temp_label" />
 
         <TextView
             android:id="@+id/tv_current_temp"
@@ -144,9 +144,9 @@
             android:id="@+id/tv_min_temp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/large_text"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_current_temp"
             app:layout_constraintStart_toStartOf="@+id/tv_lbl_longitude"
-            app:layout_constraintTop_toTopOf="@+id/tv_current_temp"
             tools:text="@string/temp24" />
 
         <TextView
@@ -163,9 +163,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
-            android:textSize="@dimen/large_text"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_min_temp"
             app:layout_constraintStart_toStartOf="@+id/tv_min_temp"
-            app:layout_constraintTop_toTopOf="@+id/tv_current_temp"
             tools:text="@string/temp24" />
 
         <TextView
@@ -185,7 +185,7 @@
             android:textSize="@dimen/large_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_current_temp_label"
-            tools:text="@string/weather_description" />
+            tools:text="@string/sunny" />
 
         <TextView
             android:id="@+id/tv_description_label"
@@ -198,51 +198,62 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_description" />
 
         <View
+            style="@style/divder"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_description_label"
-            android:layout_marginTop="8dp"
-            style="@style/divder" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_description_label" />
 
         <Button
             android:id="@+id/bt_save_data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_normal"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="@dimen/margin_normal"
             android:text="@string/save_weather_data"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_description_label" />
 
+        <View
+            style="@style/divder"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_height="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_save_data" />
+
         <TextView
-            android:id="@+id/tv_database"
-            android:layout_width="0dp"
+            android:id="@+id/tvWeatherHistory"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_normal"
-            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginTop="32dp"
+            android:text="@string/weather_history"
+            android:textSize="@dimen/large_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bt_save_data" />
 
         <Button
-            android:id="@+id/bt_show_data"
+            android:id="@+id/bt_clear_data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_normal"
-            android:layout_marginTop="@dimen/margin_normal"
-            android:text="@string/show_weather_data"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_database" />
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:text="@string/clear_data"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvWeatherHistory"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-        <Button
-            android:id="@+id/bt_refresh_data"
-            android:layout_width="wrap_content"
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_weather_history"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_normal"
-            android:layout_marginTop="@dimen/margin_normal"
-            android:text="@string/refresh_weather_data"
+            android:layout_marginTop="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bt_show_data" />
-
+            app:layout_constraintTop_toBottomOf="@+id/bt_clear_data" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
