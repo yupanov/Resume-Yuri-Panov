@@ -23,6 +23,7 @@ class AboutFragment: Fragment() {
             if (isWeatherAboutShown) {
                 findNavController().navigate(R.id.action_aboutFragment_to_weatherFragment)
             } else {
+                isWeatherAboutShown = true
                 findNavController().navigate(R.id.action_aboutFragment_to_aboutWeatherFragment)
             }
         }

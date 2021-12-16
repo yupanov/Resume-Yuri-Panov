@@ -15,7 +15,7 @@
     <string name="min_temperature">minimum</string>
     <string name="latitude_lbl">latitud:</string>
     <string name="longitude_lbl">longitud:</string>
-    <string name="save_weather_data">Guardar datos</string>
+    <string name="save_weather_data">Guardar</string>
     <string name="show_weather_data">Mostrar datos</string>
     <string name="refresh_weather_data">Refrescar datos</string>
     <string name="hobby_title">Hobby</string>
@@ -34,7 +34,11 @@
     <string name="phone_title">Teléfono:</string>
     <string name="email_title">Correo electrónico:</string>
     <string name="email_subject">Email de la app CV Yuri Panov</string>
-    <string name="email_body">¡Hola Yuri!</string>
+    <string name="email_body">¡Hola Yuri!\n</string>
     <string name="weather_history">Historia del tiempo</string>
     <string name="clear_data">Borrar</string>
+    <string name="filter_all">All</string>
+    <string name="filter_24_hours">24 hours</string>
+    <string name="filter_last_minute">Último minuto</string>
+    <string name="filter">Filtrar</string>
 </resources>

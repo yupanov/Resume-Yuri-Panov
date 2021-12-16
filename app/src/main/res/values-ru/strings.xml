@@ -19,7 +19,7 @@
     <string name="location_permission_not_available">Разрешение GPS недоступно</string>
     <string name="latitude_lbl">широта:</string>
     <string name="longitude_lbl">долгота:</string>
-    <string name="save_weather_data">Сохранить данные о погоде</string>
+    <string name="save_weather_data">Сохранить</string>
     <string name="show_weather_data">Показать данные о погоде</string>
     <string name="refresh_weather_data">Обновить данные</string>
     <string name="hobby_title">Хобби</string>
@@ -38,7 +38,11 @@
     <string name="phone_title">Телефон:</string>
     <string name="email_title">Электронная почта:</string>
     <string name="email_subject">Имейл из приложения Резюме Юрия Панова</string>
-    <string name="email_body">Привет, Юрий!</string>
+    <string name="email_body">Привет, Юрий!\n</string>
     <string name="weather_history">История погоды</string>
     <string name="clear_data">Очистить</string>
+    <string name="filter_all">Все</string>
+    <string name="filter_24_hours">24 часа</string>
+    <string name="filter_last_minute">В последнюю минуту</string>
+    <string name="filter">Фильтр</string>
 </resources>

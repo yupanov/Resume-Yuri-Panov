@@ -3,7 +3,7 @@
     <color name="black">#FF000000</color>
 
     <color name="primaryColor">#2196f3</color>
-    <color name="primaryLightColor">#99B8E3FF</color>
+    <color name="primaryLightColor">#B8E3FF</color>
     <color name="primaryDarkColor">#00437A</color>
     <color name="secondaryLightColor">#FFDEC7</color>
     <color name="secondaryDarkColor">#AA401F</color>

@@ -197,41 +197,34 @@
             app:layout_constraintStart_toStartOf="@+id/tv_description"
             app:layout_constraintTop_toBottomOf="@+id/tv_description" />
 
-        <View
-            style="@style/divder"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_description_label" />
-
         <Button
             android:id="@+id/bt_save_data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_normal"
-            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
             android:text="@string/save_weather_data"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_description_label" />
+            app:layout_constraintBottom_toBottomOf="@+id/tv_description_label"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <View
             style="@style/divder"
-            android:layout_marginTop="8dp"
+            android:layout_height="5dp"
             android:layout_marginStart="0dp"
             android:layout_marginEnd="0dp"
-            android:layout_height="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvWeatherHistory"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bt_save_data" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/tvWeatherHistory"
-            android:layout_width="wrap_content"
+            style="@style/title"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_normal"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="24dp"
             android:text="@string/weather_history"
             android:textSize="@dimen/large_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bt_save_data" />
 
@@ -244,16 +237,74 @@
             app:layout_constraintBaseline_toBaselineOf="@+id/tvWeatherHistory"
             app:layout_constraintEnd_toEndOf="parent" />
 
+        <RadioGroup
+            android:id="@+id/rgFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWeatherHistory">
+
+            <RadioButton
+                android:id="@+id/rbFilterAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/primaryDarkColor"
+                android:checked="true"
+                android:text="@string/filter_all"
+                android:textColor="@color/primaryDarkColor" />
+
+            <RadioButton
+                android:id="@+id/rbFilterDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/primaryDarkColor"
+                android:text="@string/filter_24_hours"
+                android:textColor="@color/primaryDarkColor" />
+
+            <RadioButton
+                android:id="@+id/rbFilterMinute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/primaryDarkColor"
+                android:text="@string/filter_last_minute"
+                android:textColor="@color/primaryDarkColor" />
+
+        </RadioGroup>
+
+        <View
+            android:id="@+id/view"
+            style="@style/divder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgFilter" />
+
+        <Button
+            android:id="@+id/btFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_weight="1"
+            android:text="@string/filter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWeatherHistory" />
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_weather_history"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginTop="8dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bt_clear_data" />
+            app:layout_constraintTop_toBottomOf="@+id/rgFilter" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

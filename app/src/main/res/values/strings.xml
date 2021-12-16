@@ -25,7 +25,7 @@
     <string name="location_permission_not_available">Location permission is not available</string>
     <string name="latitude_lbl">latitude:</string>
     <string name="longitude_lbl">longitude:</string>
-    <string name="save_weather_data">Save weather data</string>
+    <string name="save_weather_data">Save</string>
     <string name="show_weather_data">Show weather data</string>
     <string name="refresh_weather_data">Refresh data</string>
     <string name="go_to_weather">Go to the weather fragment</string>
@@ -54,8 +54,12 @@
     <string name="yupanov" translatable="false">yupanov</string>
     <string name="github_title" translatable="false">GitHub:</string>
     <string name="email_subject">Email from the app Yuri Panov Resume</string>
-    <string name="email_body">Hi Yuri!</string>
+    <string name="email_body">Hi Yuri!\n</string>
     <string name="weather_history">Weather history</string>
     <string name="clear_data">Clear</string>
+    <string name="filter_all">All</string>
+    <string name="filter_24_hours">24 hours</string>
+    <string name="filter_last_minute">Last minute</string>
+    <string name="filter">Filter</string>
 
 </resources>

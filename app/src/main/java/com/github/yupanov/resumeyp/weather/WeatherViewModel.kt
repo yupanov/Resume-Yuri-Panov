@@ -27,9 +27,12 @@ class WeatherViewModel(private val dataSource: WeatherDao, application: Applicat
 
     var timeFrom: Long = 0L
 
-    val weatherData: LiveData<List<Weather>> =
-        dataSource.selectWeatherByTime(timeFrom, System.currentTimeMillis())
+    var weatherData: LiveData<List<Weather>>? = dataSource.selectWeatherByTime(timeFrom, System.currentTimeMillis())
 
+    fun refreshWeatherHistory()  {
+        weatherData = null
+        weatherData = dataSource.selectWeatherByTime(timeFrom, System.currentTimeMillis())
+    }
 
     init {
         _status.value = WeatherStatus.LOADING

@@ -2,7 +2,6 @@ package com.github.yupanov.resumeyp.weather
 
 import android.Manifest
 import android.content.pm.PackageManager
-import android.opengl.Visibility
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -57,13 +56,6 @@ class WeatherFragment : Fragment() {
         binding.lifecycleOwner = this
         binding.viewModel = weatherViewModel
 
-
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
         startLocation()
         startWeather()
         binding.apply {
@@ -74,13 +66,26 @@ class WeatherFragment : Fragment() {
                 weatherViewModel.clearWeatherData()
             }
             val adapter = WeatherHistoryAdapter()
-            binding.rvWeatherHistory.adapter = adapter
-
-            weatherViewModel.weatherData.observe(viewLifecycleOwner, {
-                adapter.weatherData = it
+            weatherViewModel.weatherData?.observe(viewLifecycleOwner, {
+                it?.let{ adapter.submitList(it) }
             })
+            rvWeatherHistory.adapter = adapter
+
+            btFilter.setOnClickListener {
+                when(rgFilter.checkedRadioButtonId) {
+                    rbFilterAll.id -> weatherViewModel.timeFrom = 0L
+                    rbFilterDay.id -> weatherViewModel.timeFrom = System.currentTimeMillis() - 86400000L
+                    rbFilterMinute.id -> weatherViewModel.timeFrom = System.currentTimeMillis() - 60000L
+                }
+                weatherViewModel.refreshWeatherHistory()
+
+            }
+
+
 
         }
+
+        return binding.root
     }
 
 
